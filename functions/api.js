@@ -68,5 +68,5 @@ app.get('/api/hello', async (req, res) => {
     });
   }
 });
-app.use('/.netlify/functions/api', router);  // path must route to lambda
+app.use('/.netlify/functions/api', router);
 module.exports.handler = serverless(app);

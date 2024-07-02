@@ -4,9 +4,8 @@
   "description": "",
   "main": "api.js",
   "scripts": {
-    "build": "netlify-lambda build functions",
-    "start": "netlify-lambda serve functions",
-    "deploy": "netlify deploy --prod"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "netlify deploy --prod"
   },
   "keywords": [],
   "author": "",
