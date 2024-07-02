@@ -19,24 +19,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/api/location', async (req, res) => {
-  const clientIp = req.clientIp;
-  try {
-    const locationResponse = await axios.get(`http://ip-api.com/json/${clientIp}`);
-    const locationData = locationResponse.data;
-    const city = locationData.city || 'Unknown location';
-    res.json({
-      client_ip: clientIp,
-      location: city
-    });
-  } catch (error) {
-    console.error('Error fetching location data:', error.message);
-    res.status(500).json({
-      error: 'An error occurred while fetching data'
-    });
-  }
-});
-
 app.get('/api/hello', async (req, res) => {
   const visitorName = req.query.visitor_name || 'Guest';
   const clientIp = req.clientIp;
