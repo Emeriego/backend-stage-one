@@ -1,0 +1,24 @@
+{
+  "name": "backend-stage-one",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api.js",
+  "scripts": {
+    "build": "netlify-lambda build functions",
+    "start": "netlify-lambda serve functions",
+    "deploy": "netlify deploy --prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "netlify-cli": "^17.31.0"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^2.0.16",
+    "serverless-http": "^3.2.0"
+  }
+}
